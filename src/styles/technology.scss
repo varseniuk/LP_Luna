@@ -50,6 +50,7 @@ $lineWidthS: 30px;
     border-radius: 50%;
     z-index: 1;
     cursor: pointer;
+    transition: 0.5s;
 
     &:after {
       content: "";
