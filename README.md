@@ -3,11 +3,11 @@
 [LAYOUT DESIGN](https://www.figma.com/file/5jdcVOv7NiA0l0HGfqEyHC/%E2%84%9611-(kickstarter)-(Copy)?node-id=0%3A1)
 
 # About
-The landing page of a KickStarter project.
+The landing page for a KickStarter project.
 
 The project was created with:
 - HTML5
-- CSS3 (SASS)
+- CSS3
 - SASS
 - JavaScript
 - Figma
