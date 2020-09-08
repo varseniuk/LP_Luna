@@ -1,0 +1,55 @@
+.scroll {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
+  align-self: center;
+
+  &__btn {
+    width: 48px;
+    height: 13px;
+    background-image: url("/images/scroll-left.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: $backgroundColor;
+    cursor: pointer;
+    outline: none;
+
+    &--left {
+      background-image: url("/images/scroll-left.png");
+
+      &:hover {
+        background-image: url("/images/scroll-left-hover.png");
+      }
+
+      &:disabled {
+        background-image: url("/images/scroll-left-disabled.svg");
+      }
+    }
+
+    &--right {
+      background-image: url("/images/scroll-right.svg");
+
+      &:hover {
+        background-image: url("/images/scroll-right-hover.svg");
+      }
+
+      &:disabled {
+        background-image: url("/images/scroll-right-disabled.png");
+      }
+    }
+  }
+
+  &-label {
+    font-family: "DIN Pro", Helvetica, sans-serif;
+    font-size: 11px;
+    line-height: 14px;
+    color: $headerSecondaryColor;
+
+    &--active {
+      font-size: 16px;
+      line-height: 20px;
+      color: $mainColor;
+    }
+  }
+}

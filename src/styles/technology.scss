@@ -1,0 +1,486 @@
+$largeDescriptionBlockGap: 20px;
+$smallDescriptionBlockGap: 10px;
+$largeDescriptionMargin: calc(100% + #{$largeDescriptionBlockGap});
+$smallDescriptionMargin: calc(100% + #{$smallDescriptionBlockGap});
+$lineHeight: 5px;
+$lineWidth: 60px;
+$lineHeightS: 2px;
+$lineWidthS: 30px;
+
+.technology {
+  max-width: 1230px;
+
+  &__heading {
+    width: max-content;
+    margin-left: 15%;
+    margin-bottom: 66px;
+    line-height: 70px;
+  }
+
+  &__scroll {
+    display: none;
+  }
+
+  &__image {
+    width: 100%;
+    height: 100%;
+    object-position: left;
+    object-fit: cover;
+    transform: matrix(0.99, -0.14, 0.14, 0.99, 0, 0);
+
+    &-container {
+      margin: 0 auto;
+      width: 1230px;
+      height: 546px;
+      position: relative;
+      transition: left $transitionDuration;
+      left: 0;
+    }
+  }
+
+  &__btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: $btnSizeL;
+    height: $btnSizeL;
+    position: absolute;
+    background-color: $turquoise;
+    color: white;
+    border-radius: 50%;
+    z-index: 1;
+    cursor: pointer;
+
+    &:after {
+      content: "";
+      height: 0;
+      font-family: "Helvetica Neue", Helvetica, sans-serif;
+      font-size: 18px;
+      line-height: 1.5;
+      color: $mainColor;
+      transition: height 0.5s;
+      z-index: 5;
+    }
+
+    &:before {
+      content: "";
+      height: 0;
+      width: 0;
+    }
+
+    &:hover {
+      background-color: $hoverColor;
+
+      &:after {
+        position: absolute;
+        display: flex;
+        width: 200px;
+        right: calc(100% - #{$btnSizeL / 2});
+      }
+
+      &:before {
+        position: absolute;
+        content: "";
+        height: $lineHeight;
+        width: $lineWidth;
+        background-color: $mainColor;
+        transition-delay: 0.5s;
+        right: calc(100% - #{$btnSizeL / 2 - 200px + $lineWidth - 1px});
+      }
+    }
+
+    &--bottom {
+      &:hover {
+        &:after {
+          align-items: flex-end;
+          border-right: 1px solid $mainColor;
+          border-bottom: 1px solid $mainColor;
+          top: $largeDescriptionMargin;
+        }
+      }
+    }
+
+    &--top {
+      &:hover {
+        &:after {
+          align-items: flex-start;
+          border-right: 1px solid $mainColor;
+          border-top: 1px solid $mainColor;
+          bottom: $largeDescriptionMargin;
+        }
+      }
+    }
+
+    &-1 {
+      top: 65%;
+      left: 40%;
+
+      &:hover {
+        &:after {
+          content: "Light guiding component for running light";
+          height: 170px;
+        }
+        &:before {
+          top: calc(100% + #{$largeDescriptionBlockGap + 170px});
+        }
+      }
+    }
+
+    &-2 {
+      top: 10%;
+      left: 86%;
+
+      &:hover {
+        &:after {
+          content: "Control button ring ornament";
+          height: 250px;
+        }
+
+        &:before {
+          top: calc(100% + #{$largeDescriptionBlockGap + 250px});
+        }
+      }
+    }
+
+    &-3 {
+      top: 60%;
+      left: 22%;
+
+      &:hover {
+        &:after {
+          content: "Transparent light guiding component";
+          height: 250px;
+        }
+
+        &:before {
+          top: calc(100% + #{$largeDescriptionBlockGap + 250px});
+        }
+      }
+    }
+
+    &-4 {
+      top: 35%;
+      left: 25%;
+
+      &:hover {
+        &:after {
+          content: "Tweeter";
+          height: 170px;
+        }
+        &:before {
+          bottom: calc(100% + #{$largeDescriptionBlockGap + 170px});
+        }
+      }
+    }
+
+    &-5 {
+      top: 20%;
+      left: 48%;
+
+      &:hover {
+        &:after {
+          content: "Full range driver";
+          height: 100px;
+        }
+
+        &:before {
+          bottom: calc(100% + #{$largeDescriptionBlockGap + 100px});
+        }
+      }
+    }
+
+    &-6 {
+      top: 40%;
+      left: 60%;
+
+      &:hover {
+        &:after {
+          content: "Mainboard PSB";
+          height: 250px;
+        }
+
+        &:before {
+          top: calc(100% + #{$largeDescriptionBlockGap + 250px});
+        }
+      }
+    }
+
+    &-7 {
+      top: 15%;
+      left: 72%;
+
+      &:hover {
+        &:after {
+          content: "Aluminium casing";
+          height: 250px;
+        }
+
+        &:before {
+          top: calc(100% + #{$largeDescriptionBlockGap + 250px});
+        }
+      }
+    }
+
+    &-8 {
+      top: -8%;
+      left: 77%;
+
+      &:hover {
+        &:after {
+          content: "Back cover";
+          height: 320px;
+        }
+
+        &:before {
+          top: calc(100% + #{$largeDescriptionBlockGap + 320px});
+        }
+      }
+    }
+
+    &-9 {
+      top: 3%;
+      left: 89%;
+
+      &:hover {
+        &:after {
+          content: "Transparent logo";
+          height: 250px;
+        }
+
+        &:before {
+          top: calc(100% + #{$largeDescriptionBlockGap + 250px});
+        }
+      }
+    }
+
+    &-10 {
+      top: 42%;
+      left: 7%;
+
+      &:hover {
+        &:after {
+          content: "Front cover";
+          height: 170px;
+          border-right: none;
+          border-left: 1px solid $mainColor;
+          border-top: 1px solid $mainColor;
+          left: calc(100% - #{$btnSizeL / 2});
+          justify-content: flex-end;
+        }
+        &:before {
+          bottom: calc(100% + #{$largeDescriptionBlockGap + 170px});
+          left: calc(100% - #{$btnSizeL / 2 - 200px + $lineWidth - 1px});
+
+        }
+      }
+    }
+
+  }
+}
+
+@media (max-width: $mobileBreakpoint) {
+  .technology {
+
+    &__heading {
+      margin-left: 5%;
+      margin-bottom: 40px;
+      font-size: 37px;
+      line-height: 46px;
+    }
+
+    &__image {
+
+      &-container {
+        width: 625px;
+        height: 277px;
+      }
+    }
+
+    &__btn {
+      width: $btnSizeS;
+      height: $btnSizeS;
+
+      &:after {
+        font-size: $smallFontSize;
+        z-index: 15;
+      }
+
+      &:hover {
+        &:after {
+          right: calc(100% - #{$btnSizeS / 2});
+          width: 150px;
+        }
+
+        &:before {
+          height: $lineHeightS;
+          width: $lineWidthS;
+          right: calc(100% - #{$btnSizeS / 2 - 150px + $lineWidthS - 2px});
+
+        }
+      }
+
+      &--bottom {
+        &:hover {
+          &:after {
+            top: $smallDescriptionMargin;
+          }
+        }
+      }
+
+      &--top {
+        &:hover {
+          &:after {
+            bottom: $smallDescriptionMargin;
+          }
+        }
+      }
+
+      &-1 {
+        &:hover {
+          &:after {
+            height: 100px;
+          }
+
+          &:before {
+            top: calc(100px + #{$smallDescriptionMargin});
+          }
+        }
+      }
+
+      &-2 {
+        &:hover {
+          &:after {
+            height: 160px;
+          }
+
+          &:before {
+            top: calc(160px + #{$smallDescriptionMargin});
+          }
+        }
+      }
+
+      &-3 {
+        &:hover {
+          &:after {
+            height: 160px;
+            width: 120px;
+          }
+
+          &:before {
+            top: calc(160px + #{$smallDescriptionMargin});
+            right: calc(100% - #{$btnSizeS / 2 - 120px + $lineWidthS - 2px});
+          }
+        }
+      }
+
+      &-4 {
+        &:hover {
+          &:after {
+            height: 100px;
+            width: 120px;
+          }
+
+          &:before {
+            bottom: calc(100px + #{$smallDescriptionMargin});
+            right: calc(100% - #{$btnSizeS / 2 - 120px + $lineWidthS - 2px});
+          }
+        }
+      }
+
+      &-5 {
+        &:hover {
+          &:after {
+            height: 50px;
+            width: 120px;
+          }
+
+          &:before {
+            bottom: calc(50px + #{$smallDescriptionMargin});
+            right: calc(100% - #{$btnSizeS / 2 - 120px + $lineWidthS - 2px});
+          }
+        }
+      }
+
+      &-6 {
+        &:hover {
+          &:after {
+            height: 120px;
+          }
+
+          &:before {
+            top: calc(120px + #{$smallDescriptionMargin});
+          }
+        }
+      }
+      &-7 {
+        &:hover {
+          &:after {
+            height: 120px;
+          }
+
+          &:before {
+            top: calc(120px + #{$smallDescriptionMargin});
+          }
+        }
+      }
+
+      &-8 {
+        &:hover {
+          &:after {
+            height: 200px;
+            width: 120px;
+          }
+
+          &:before {
+            top: calc(200px + #{$smallDescriptionMargin});
+            right: calc(100% - #{$btnSizeS / 2 - 120px + $lineWidthS - 2px});
+          }
+        }
+      }
+
+      &-9 {
+        &:hover {
+          &:after {
+            height: 160px;
+          }
+
+          &:before {
+            top: calc(160px + #{$smallDescriptionMargin});
+          }
+        }
+      }
+
+      &-10 {
+        &:hover {
+          &:after {
+            height: 100px;
+            width: 100px;
+            left: calc(100% - #{$btnSizeS / 2});
+          }
+
+          &:before {
+            bottom: calc(100px + #{$smallDescriptionMargin});
+            left: calc(100% - #{$btnSizeS / 2 - 100px + $lineWidthS - 2px});
+          }
+        }
+      }
+
+    }
+  }
+}
+
+@media (max-width: 1120px) and (min-width: 768px) {
+  .technology {
+    &__scroll {
+      display: flex;
+    }
+  }
+}
+
+@media (max-width: 580px) {
+  .technology {
+    &__scroll {
+      display: flex;
+    }
+  }
+}
